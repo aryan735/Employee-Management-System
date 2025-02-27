@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Added Successfully</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Background Styling */
+    body {
+      background: url('https://img.freepik.com/free-photo/cyberpunk-city-street-night-with-neon-lights-futuristic-aesthetic_23-2151488749.jpg?t=st=1737871819~exp=1737875419~hmac=a055eec978bb2c7a1673fa165ccca3d2d73317d71f9072830116a68480280103&w=996') no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .navbar-brand {
+      color: #ffcc00; /* Neon Yellow */
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(255, 204, 0, 1), 0 0 20px rgba(255, 204, 0, 1);
+    }
+
+    .navbar-brand:hover {
+      color: #ff9900; /* Darker Yellow */
+      text-shadow: 0 0 20px rgba(255, 204, 0, 1), 0 0 30px rgba(255, 204, 0, 1);
+    }
+
+    /* Success Message Styling */
+    .alert-success {
+      background-color: rgba(0, 255, 255, 0.7); /* Neon Cyan */
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+      text-align: center;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 1);
+    }
+
+    /* Button Styling */
+    .btn {
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: #00b3b3; /* Neon Cyan */
+      color: white;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    }
+
+    .btn-primary:hover {
+      background-color: #008080; /* Darker Cyan */
+      box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+      transform: scale(1.05);
+    }
+
+    .btn-warning {
+      background-color: #ffcc00; /* Neon Yellow */
+      color: white;
+      box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+    }
+
+    .btn-warning:hover {
+      background-color: #ffaa00; /* Darker Yellow */
+      box-shadow: 0 0 20px rgba(255, 204, 0, 1);
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-black">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1 text-uppercase text-warning fw-bold mx-auto">
+        Employee Added Successfully
+      </span>
+    </div>
+  </nav>
+
+  <!-- Success Message -->
+  <div class="container mt-5">
+    <div class="alert alert-success text-center">
+      <h4>Your employee has been successfully added!</h4>
+    </div>
+
+    <!-- Buttons -->
+    <div class="text-center">
+      <a href="index.html" class="btn btn-primary mx-2">Go Back</a>
+      <a href="all-employees.html" class="btn btn-warning mx-2">View Employee List</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

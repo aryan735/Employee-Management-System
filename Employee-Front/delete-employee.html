@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Employee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Background and Body Styling */
+    body {
+      background: url('https://img.freepik.com/free-photo/illustration-anime-character-rain_23-2151394700.jpg?t=st=1737865782~exp=1737869382~hmac=11e7ec9e72bd99c21d2bb1a913b4b647d91fe5a261b6fbd94e9afcb308da7b7f&w=1380') no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    /* Heading Styling */
+    h2 {
+      color: #ff0033; /* Neon Red */
+      text-align: center;
+      text-shadow: 0 0 10px rgba(255, 0, 51, 1), 0 0 20px rgba(255, 0, 51, 1);
+    }
+
+    /* Button Styling */
+    .btn {
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .btn-danger {
+      background-color: #ff0033; /* Neon Red */
+      color: white;
+      box-shadow: 0 0 10px rgba(255, 0, 51, 0.8);
+    }
+
+    .btn-danger:hover {
+      background-color: #b30026; /* Darker Red */
+      box-shadow: 0 0 20px rgba(255, 0, 51, 1);
+      transform: scale(1.05);
+    }
+
+    .btn-secondary {
+      background-color: #333333; /* Dark background */
+      color: white;
+      box-shadow: 0 0 10px rgba(51, 51, 51, 0.8);
+    }
+
+    .btn-secondary:hover {
+      background-color: #555555; /* Lighter Dark */
+      box-shadow: 0 0 20px rgba(51, 51, 51, 1);
+      transform: scale(1.05);
+    }
+
+    /* Confirmation Box Styling */
+    #deleteConfirmation {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+      text-align: center;
+    }
+
+    /* Neon Glow for Text */
+    #deleteConfirmation p {
+      font-size: 1.2rem;
+      text-shadow: 0 0 10px rgba(255, 0, 51, 1), 0 0 20px rgba(255, 0, 51, 1);
+    }
+
+    /* Status message */
+    #deleteStatus {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-top: 20px;
+      color: #00ffff; /* Neon Cyan */
+    }
+
+    /* Go Back Button Styling */
+    #goBackButton {
+      display: none; /* Hidden initially */
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container mt-5">
+    <h2>Delete Employee</h2>
+    <div id="deleteConfirmation">
+      <p><strong>Are you sure you want to delete this employee?</strong></p>
+      <button id="confirmDelete" class="btn btn-danger">Yes, Delete</button>
+      <button id="cancelDelete" class="btn btn-secondary">Cancel</button>
+    </div>
+    <div id="deleteStatus" class="mt-4"></div>
+
+    <!-- Go Back Button -->
+    <div id="goBackButton">
+      <a href="all-employees.html" class="btn btn-primary">Go Back</a>
+    </div>
+  </div>
+
+  <!-- Link to separate JS file -->
+  <script src="delete-employee.js"></script>
+
+</body>
+</html>

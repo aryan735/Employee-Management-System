@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Employees</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Background styling */
+    body {
+      background: linear-gradient(to right, #f3c14f, #f0a500); /* Yellow to gold gradient */
+      background-image: url('https://img.freepik.com/free-photo/anime-night-sky-illustration_23-2151684327.jpg?t=st=1737868917~exp=1737872517~hmac=9da985967c30fad039a7a05a921aa17d93d899c6c1579b4fcb4a5febb479001e&w=1380');
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      width: 100%;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .navbar-brand {
+      color: #ffcc00;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px rgba(255, 204, 0, 1), 0 0 30px rgba(255, 204, 0, 1);
+    }
+
+    .navbar-brand:hover {
+      color: #f1c232;
+      text-shadow: 0 0 30px rgba(255, 204, 0, 1), 0 0 50px rgba(255, 204, 0, 1);
+    }
+
+    /* Card Styling */
+    .card {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+      margin-top: 30px;
+    }
+
+    .card-header {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #ffcc00;
+      font-size: 1.25rem;
+      text-shadow: 0 0 10px rgba(255, 204, 0, 1), 0 0 20px rgba(255, 204, 0, 1);
+    }
+
+    .card-body {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Table Styling */
+    .table {
+      color: white;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table th, .table td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    .table-dark {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #ffcc00;
+    }
+
+    .table th {
+      font-weight: bold;
+    }
+
+    .table td {
+      font-size: 1rem;
+    }
+
+    /* Button Styling */
+    .btn {
+      border-radius: 5px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .btn-view {
+      background-color: #f1c232;
+      color: #000;
+      box-shadow: 0 0 15px rgba(255, 194, 51, 1);
+    }
+
+    .btn-view:hover {
+      background-color: #e1b12c;
+      box-shadow: 0 0 25px rgba(255, 194, 51, 1);
+      transform: scale(1.05);
+    }
+
+    .btn-edit {
+      background-color: #33cc33;
+      color: #ffffff;
+      box-shadow: 0 0 15px rgba(51, 204, 51, 1);
+    }
+
+    .btn-edit:hover {
+      background-color: #28a745;
+      box-shadow: 0 0 25px rgba(51, 204, 51, 1);
+      transform: scale(1.05);
+    }
+
+    .btn-delete {
+      background-color: #cc0000;
+      color: #ffffff;
+      box-shadow: 0 0 15px rgba(204, 0, 0, 1);
+    }
+
+    .btn-delete:hover {
+      background-color: #e60000;
+      box-shadow: 0 0 25px rgba(204, 0, 0, 1);
+      transform: scale(1.05);
+    }
+
+    /* "Go Back" Button with Neon Effect */
+    .btn-back {
+      background-color: #00e5ff; /* Neon blue */
+      color: white;
+      border-radius: 5px;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin: 20px 0;
+      box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff, 0 0 30px #00e5ff, 0 0 40px #00e5ff; /* Neon glow */
+    }
+
+    .btn-back:hover {
+      background-color: #00bcd4; /* Slightly darker neon blue on hover */
+      box-shadow: 0 0 20px #00e5ff, 0 0 30px #00e5ff, 0 0 40px #00e5ff, 0 0 50px #00e5ff; /* Glowing effect on hover */
+      transform: scale(1.05); /* Slight scaling on hover */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">All Employees</span>
+    </div>
+  </nav>
+
+
+  <!-- Employee Table -->
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header text-center">
+        <h4>Employee List</h4>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered table-striped text-center">
+          <thead class="table-dark">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Salary</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="employeeTableBody">
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>30</td>
+              <td>$5000</td>
+              <td>
+                <button class="btn btn-view">View</button>
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jane Smith</td>
+              <td>28</td>
+              <td>$4500</td>
+              <td>
+                <button class="btn btn-view">View</button>
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-center">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+    <!-- Go Back Button -->
+    <div class="container text-center">
+      <a href="index.html" class="btn btn-back">Go Back to Home</a>
+    </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="all-employess.js"></script>
+</body>
+</html>
